@@ -1,14 +1,66 @@
-title: My Professional Site
-description: Portfolio and Projects by Ashwani
-remote_theme: mmistakes/minimal-mistakes@4.24.0
+# Site settings
+title: "Ashwani's Portfolio"
+description: "Data Analyst | Developer | Creator"
+url: "https://askaira.github.io/github-pages-site" # ✅ Replace with your GitHub Pages URL
+baseurl: "" # Leave empty unless using a subfolder
 
+# Author info
+author:
+  name: "Ashwani Kaira"
+  avatar: "/assets/images/avatar.jpg"
+  bio: "Passionate about tech, open-source, and data."
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-include-cache
 
+# Markdown processing
+markdown: kramdown
+highlighter: rouge
+
+# Google Analytics (Optional)
+google_analytics: UA-XXXXXXXXX-X # 🔁 Replace with your actual tracking ID
+
+# Disqus (Optional)
 comments:
-  provider: disqus
+  provider: "disqus"
   disqus:
-    shortname: your-disqus-shortname
+    shortname: your-disqus-shortname # 🔁 Replace with your Disqus shortname
 
-google_analytics: UA-XXXXXXXXX-X
+# Collections
+collections:
+  posts:
+    output: true
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+
+# Exclude unnecessary files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
+
+# Social links (Optional)
+social:
+  links:
+    - https://github.com/yourusername
+    - https://linkedin.com/in/yourlinkedin
